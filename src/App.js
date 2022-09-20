@@ -1,15 +1,14 @@
 import React from 'react'
 import {Header} from './components/Header';
 import {List} from './components/List';
+import {AppWrapper} from './components/App.styles';
 
 function App () {
   return (
-    <div className="App">
-      <Header/>
-        <List>
-
-        </List>
-    </div>
+      <AppWrapper>
+        <Header/>
+            <List/>
+      </AppWrapper>
   )
 }
 

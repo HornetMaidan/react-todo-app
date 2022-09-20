@@ -6,10 +6,10 @@ export const Input = ({addTodo}) => {
     const [value, setValue] = useState('')
     const handleChange = (e) => {
         if (e.code === 'Enter' && value.trim())
-            addTodo(value.trim)
-        setValue(e.target.value)
+            addTodo(value.trim())
+            setValue(e.target.value)
     }
     return (
-        <StyledInput type={'text'} value={value} onChange={handleChange}/>
+        <StyledInput type={'text'} value={value} onChange={(e) => setValue(e.target.value)} onKeyDown={handleChange}/>
     )
 }

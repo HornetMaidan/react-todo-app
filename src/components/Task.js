@@ -3,6 +3,6 @@ import {StyledTasks} from './Tasks.styles';
 
 export const Task = ({task}) => {
     return(
-        <StyledTasks>{task.text}</StyledTasks>
+            <StyledTasks>{task.text}</StyledTasks>
     )
 }

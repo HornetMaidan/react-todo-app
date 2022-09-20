@@ -4,6 +4,7 @@ import { StyledTasks } from './Tasks.styles';
 import { Task } from './Task';
 import { nanoid } from 'nanoid';
 import { Input } from './Input';
+import { ListStyles } from './List.styles';
 
 export const List = () => {
   const [tasks, setTasks] = useState([]);
@@ -13,11 +14,10 @@ export const List = () => {
     setTasks((prev) => [...prev, newTask]);
   };
   return (
-    <StyledTasks>
-      <Input addTodo={addTodo} />
-      {tasks.map((item) => (
-        <Task task={item} key={item.id} />
-      ))}
-    </StyledTasks>
+      <ListStyles>
+        <Input addTodo={addTodo}/>
+          {tasks.map((item) => (
+              <Task task={item} key={item.id}/>))}
+      </ListStyles>
   );
 };
